@@ -1,0 +1,914 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap');
+
+
+
+:root {
+    --primary-color: #ff0134    ; 
+    --secondary-color: #333333; /* Dark Grey */
+    --accent-color: #000000;    /* Black */
+    --text-color: #FFFFFF;      /* White text */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* General styles for the navbar */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Teko', sans-serif;
+    color: var(--text-color); /* White text */
+    background-color: black;
+    background-image: url('images/background.png');
+    background-size: cover; /* Scale the image to cover the viewport */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-attachment: fixed; /* Keep the background fixed when scrolling */
+    background-position: center; /* Center the background image */
+}
+
+.navbar {
+    padding: 10px;
+    height: 12vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar img {
+    height: 80px;
+}
+
+.nav-links {
+    list-style-type:none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 20px;
+    padding: 20px;
+}
+
+.hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: var(--text-color);
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color); /* White text for links */
+    font-size: 22px;
+    letter-spacing: 2px;
+    transition: color 0.3s;
+    font-weight: lighter;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color); /* Neon green hover effect */
+}
+
+.contact-mobile{
+    display: none;
+}
+
+/* Styles for the "Contact" button */
+.contact a {
+    background-color: var(--primary-color); /* Neon green background */
+    color: var(--accent-color); /* Black text */
+    padding: 5px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.contact a:hover {
+    background-color: var(--accent-color); /* Black background on hover */
+    color: var(--primary-color); /* Neon green text on hover */
+}
+
+.arrow{
+    position: fixed;
+    right: 50%;
+    bottom: 5vh;
+    z-index: 1000;
+    height: 4vh;
+    width: 4vh;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    text-align: center;
+    font-size: 24px;
+    cursor: pointer;
+}
+.arrow a{
+    color: white;
+    text-decoration: none;
+}
+
+
+.main-mobile{
+    display: none;
+}
+.main {
+    display: flex;
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space out items horizontally */ /* Full viewport height */
+    width: 100vw;
+    height: 88vh;
+}
+
+.main .text-div {
+    height: auto;
+    text-align: left; /* Align text to the left */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-bottom: 17vh;
+}
+.main .text-div .one{
+    font-size: 150px;
+    font-style: italic;
+    margin-left: 50px;
+    line-height: 150px; /* Adjust this value as needed */
+
+}
+.main .text-div .one p1{
+    color:var(--primary-color);
+}
+.main .text-div .two{
+    width: 350px;
+    border-radius: 5px;
+    font-size: 30px;
+    text-align: center;
+    font-style: italic;
+    margin-left: 50px;
+    background-color: var(--primary-color);
+}
+.main .image-div {
+
+    display: flex; /* Center image within div */
+    align-items: center; /* Center image vertically */
+    justify-content: center; /* Center image horizontally */
+}
+
+.main .image-div img {
+    height: 600px;
+    margin-right: 130px;
+    margin-bottom: 10vh;
+}
+
+
+
+
+
+
+.second {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+.second img {
+    height: 100vh;
+    clip-path: polygon(0% 0%, 80% 0%, 100% 100%, 0% 100%);
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-right: 40px;
+    background-color: #000000;
+    height: 100vh;
+
+}
+
+.content .heading1{
+    margin-top: 40px;
+    font-size: 30px;
+    text-align: right;
+    color: var(--primary-color);
+}
+.content .heading2{
+    font-size: 110px;
+    text-align: right;
+    padding-left: 80px;
+    line-height: 90px;
+}
+.content .heading2 p1 {
+    color: var(--primary-color);
+}
+.content .text{
+    font-size: 30px;
+    margin-top: 20px;
+    font-weight: lighter;
+    text-align: right;
+}
+.content .mark {
+    align-self: self-end;
+    height: auto;
+    width: 150px; /* Adjust the height as needed */   /* Set a specific width, or adjust as needed */
+}
+
+
+
+
+
+
+.trainers-section {
+    height: 100vh;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.section-heading {
+    font-size: 80px;
+    margin-bottom: 30px;
+}
+
+.trainer-cards {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap; /* Allows cards to wrap on smaller screens */
+}
+
+.trainer-card {
+
+    border-radius: 5px;
+    overflow: hidden;
+    width: 300px;
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.trainer-card:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.trainer-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover; /* Ensures the image fills the container */
+    clip-path: polygon(0% 0%, 85% 0%, 100% 100%, 12% 100%);
+    outline: 5px solid #ff0134; /* Red border-like effect */
+    outline-offset: -5px; /* Moves the outline inward, creating space between the border and the image */
+}
+
+
+
+
+.trainer-info {
+    position: relative;
+    top: -20px;
+    left: -5px;
+    padding: 5px;
+    background-color: var(--primary-color);
+    clip-path: polygon(5% 0%, 95% 0%, 100% 100%,10% 100%);
+}
+
+.trainer-name {
+    font-size: 30px;
+    color:black;
+
+}
+
+.trainer-desc {
+    font-size: 20px;
+    font-weight: lighter;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.trainers-section p1{
+    color: var(--primary-color);
+}
+
+.trainer-cards .second-card {
+    margin-top: 150px; /* Adjust the value to position the 2nd card lower */
+}
+
+.trainer-cards .fourth-card {
+    margin-top: 150px; /* Adjust the value to position the 4th card lower */
+}
+
+
+
+
+.services{
+    background-color: var(--primary-color);
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+}
+
+
+.services .heading {
+    font-size: 80px;
+    line-height: 80px;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/cover.jpg');
+    background-size: cover;
+    background-position: center; /* Ensure the image is centered */
+    min-height: 250px;
+    padding-top: 100px;
+    color: #ffffff; /* Ensure text is visible on the dark background */
+}
+
+.services .heading p1{
+    color: var(--primary-color);
+
+}
+.services .boxes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+}
+.services .boxes .box{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: black;
+    height:100px;
+    width:600px;
+    margin: 20px;
+    position: relative;
+    top: -60px;
+    clip-path: polygon(8% 0%, 100% 0%, 92% 100%,0% 100%);
+    
+}
+.services .boxes .big{
+    font-size: 40px;
+    color: var(--primary-color);
+}
+.services .boxes .small{
+    font-size: 20px;
+}
+
+
+.pricing-table {
+    margin-top: 40px;
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+.pricing-card {
+    background-color: transparent;
+    border-radius: 10px;
+    border: 2px solid #fff;
+    padding: 20px;
+    width: 300px;
+    height: 70vh;
+    text-align: center;
+    color: #fff;
+}
+
+.pricing-title {
+    font-size: 3rem;
+    color: var(--primary-color);
+    line-height: 10px;
+}
+
+.pricing-price {
+    font-size: 2.5rem;
+    color: #fff;
+    line-height: 10px;
+    margin-bottom: 50px;
+}
+
+.pricing-price span {
+    font-size: 1.5rem;
+    color: #8b8d93;
+}
+
+.features {
+    font-size: 1.3rem;
+    font-weight: lighter;
+    list-style-type: circle;
+    margin: 20px 10px ;
+    text-align: left;
+}
+
+.features li {
+    margin-bottom: 20px;
+}
+
+.btn {
+    margin-top: 20px;
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: #0d1117;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+.btn:hover {
+    transform: scale(1.2);
+}
+.plans-heading{
+    text-align: right;
+    margin-right: 5%;
+    font-size: 70px;
+    height: 10vh;
+}
+
+
+
+.gallery-heading{
+    color: var(--primary-color);
+    margin-left: 5%;
+    font-size: 70px;
+    margin-bottom: 5vh;
+}
+.slideshow-container {
+    width: 100vw; /* Set the container to full viewport width */
+    height: 60vh; /* Adjust the height as needed */
+    position: relative;
+    margin: auto;
+    overflow: hidden; /* Ensures that the image fits within the container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5vh;
+}
+
+#slideshow {
+    width: 70vw; /* Make the image take up the full width of the viewport */
+    height: 100%; /* Ensure the image height matches the container */
+    object-fit: cover; /* Scale the image to fill while maintaining aspect ratio */
+}
+
+
+
+
+.footer {
+    background-color: #000000;
+    padding: 50px 20px;
+    color: white;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-logo img {
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+.footer-sections {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 40px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-section h3 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    font-size: 24px;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 10px 0;
+    color: #cccccc;
+}
+
+.footer-section ul li a {
+    color: #cccccc;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: var(--primary-color);
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.social-icons a img {
+    width: 30px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-icons a:hover img {
+    transform: scale(1.2);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid #333333;
+}
+
+.footer-bottom p {
+    color: #cccccc;
+}
+
+
+
+
+
+.hidden {
+    opacity: 0;
+    filter: blur(1px);
+    transform: translateY(20px);
+    transition: all 1s ease-out;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+}
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+
+    body {
+        background-image: url('images/rbackground.png');
+    
+    }
+    .arrow{
+        display: none
+    }
+    .navbar{
+        height: unset;
+    }
+    .navbar img {
+        height: 5vh;
+    }
+    /* Hide the nav-links by default */
+    .nav-links {
+        padding-top: 3vh;
+        display: block;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        transition: right 0.5s ease; /* Animation for sliding in */
+        z-index: 1000;
+    }
+
+    .nav-links li {
+        margin: 20px 0;
+        padding: 10px 0;
+        width: 100%;
+    }
+
+    .nav-links li a {
+        font-size: 24px;
+        color: white;
+        text-decoration: none;
+        display: block;
+        margin: 0 40px;
+        padding: 10px 0;
+        transition: color 0.3s ease;
+    }
+
+
+    .hamburger {
+        display: block;
+        position: fixed;
+        top: 15px;
+        right: 15px;
+        font-size: 25px;
+        z-index: 1100; /* Ensure the hamburger icon is above the navbar */
+        color: white;
+        cursor: pointer;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+    .contact-mobile{
+        display: unset;
+    }
+    .contact-desktop{
+        display: none;
+    }
+    .main-mobile button:active{
+        transform: scale(0.9);
+    }
+
+
+
+    .main{
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .main-mobile{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 80vh;
+    }
+    .image-div img {
+        height: 45vh;
+        margin-right: 0px;
+        margin-top: 0px;
+        margin-bottom: unset;
+    }
+    .main-mobile .text-div {
+        height: auto;
+        text-align: left; /* Align text to the left */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    .main-mobile .text-div .one{
+        width: 100%;
+        width: auto;
+        font-size: 9vh;
+        font-style: italic;
+        margin: 20px 10px;
+        line-height: 60px; /* Adjust this value as needed */
+    
+    }
+    .main-mobile .text-div .two{
+        width: 90%;
+        border-radius: 5px;
+        font-size: 2.5vh;
+        text-align: justify;
+        font-style: unset;
+        margin: 0px 10px; 
+        font-weight: lighter;
+        background-color: unset;
+    }
+    .main-mobile button{
+        width: 40%;
+        border: none;
+        padding: 10px;
+        margin-top: 10px;
+        margin-left: 10px;
+        background-color: var(--primary-color);
+        border-radius: 5px;
+        color: white;
+        font-size: 15px;
+    }
+    
+
+
+    .second{
+        flex-direction: column;
+    }
+    .second img {
+        display: none;
+    }
+    .content{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding-right: 0px;
+        background-color: #000000;
+        height: 90vh;
+    
+    }
+    .content .heading2{
+        font-size: 90px;
+        text-align: right;
+        padding-left: 0px;
+        margin-left: 20px;
+        line-height: 90px;
+    }
+    .content .text{
+        font-size: 3vh;
+        margin-top: 20px;
+        font-weight: lighter;
+        text-align: right;
+        margin-left: 10px;
+    }
+    .content .mark {
+        display: none;
+       
+    }
+
+
+    .trainers-section {
+        height: unset;
+        padding: 60px 20px;
+        text-align: center;
+    }
+
+    .section-heading {
+        font-size: 65px;
+        margin-bottom: 30px;
+    }
+    .trainer-card {
+
+        border-radius: 5px;
+        width: 42%;
+        height: auto;
+        margin-bottom: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+    }
+    .trainer-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover; /* Ensures the image fills the container */
+        clip-path: polygon(0% 0%, 85% 0%, 100% 100%, 12% 100%);
+        outline: 5px solid #ff0134; /* Red border-like effect */
+        outline-offset: -5px; /* Moves the outline inward, creating space between the border and the image */
+    }
+    .trainer-info {
+    position: relative;
+    top: -20px;
+    left: -5px;
+    padding: 5px;
+    background-color: var(--primary-color);
+    clip-path: polygon(5% 0%, 95% 0%, 100% 100%,10% 100%);
+    }
+
+    .trainer-name {
+        font-size: 25px;
+        color:black;
+
+    }
+
+    .trainer-desc {
+        width: 80px;
+        font-size: 15px;
+        font-weight: lighter;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .trainer-cards .second-card {
+        margin-top: 30px; /* Adjust the value to position the 2nd card lower */
+    }
+    
+    .trainer-cards .fourth-card {
+        margin-top: 30px; /* Adjust the value to position the 4th card lower */
+    }
+
+
+
+    .services{
+        height: unset;
+    }
+    .services .heading {
+        font-size: 70px;
+        line-height: 60px;
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/cover.jpg');
+        background-size: 600px 200px;
+        background-position: top; /* Ensure the image is centered */
+        background-repeat: no-repeat;
+        height: unset;
+        padding: 15px;
+        color: #ffffff; /* Ensure text is visible on the dark background */
+    }
+    .services .boxes .box{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: black;
+        height:100px;
+        width:90%;
+        margin: 10px;
+        position: relative;
+        top: -50px;
+        clip-path: polygon(8% 0%, 100% 0%, 92% 100%,0% 100%);
+        
+    }
+    .services .boxes .big{
+        font-size: 30px;
+        color: var(--primary-color);
+        padding-left: 30px;
+    }
+    .services .boxes .small{
+        font-size: 20px;
+        padding-right: 30px;
+        width: 50%;
+    }
+
+    .pricing-table{
+        gap: 50px;
+        height: unset;
+    }
+    .pricing-card{
+        width: 70vw;
+        height: auto;
+    }
+    .pricing-price{
+        margin-bottom: 30px;
+    }
+    .features li {
+        margin-bottom: 0px;
+        font-size: 3vh;
+    }
+    .btn{
+        margin-top: 0px;
+    }
+    .plans-heading{
+        font-size: 50px;
+        margin-right: 5%;
+        margin-top: 20px;
+    }
+
+
+    .gallery-heading{
+        color: var(--primary-color);
+        margin-left: 5%;
+        font-size: 50px;
+        margin-bottom: 5vh;
+    }
+    .slideshow-container {
+        width: 100vw; /* Set the container to full viewport width */
+        height: 20vh; /* Adjust the height as needed */
+        position: relative;
+        margin: auto;
+        overflow: hidden; /* Ensures that the image fits within the container */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 5vh;
+    }
+    
+    #slideshow {
+        width: 90vw; /* Make the image take up the full width of the viewport */
+        height: 100%; /* Ensure the image height matches the container */
+        object-fit: cover; /* Scale the image to fill while maintaining aspect ratio */
+    }
+
+    
+
+    .footer {
+        background-color: #000000;
+        padding: 20px 20px;
+        color: white;
+    }
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-logo img {
+        width: 200px; /* Reduced logo size for mobile */
+        margin-bottom: 10px;
+    }
+
+    .footer-sections {
+        flex-direction: column;
+        gap: 0px; /* Reduced gap */
+    }
+
+    .footer-section {
+        text-align: center;
+        min-width: 100%;
+    }
+    .footer-section h3 {
+        color: var(--primary-color);
+        margin-bottom: 0px;
+        font-size: 24px;
+        border-bottom: 2px solid var(--primary-color);
+        padding-bottom: 10px;
+    }
+    .footer-section ul li {
+        margin: 10px 0;
+        color: #cccccc;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+}
